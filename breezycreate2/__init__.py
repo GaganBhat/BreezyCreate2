@@ -28,13 +28,10 @@ import serial
 import warnings
 import time
 import pkg_resources
-
 import struct
+import sys
 
-reload(struct)  
-struct.setdefaultencoding('utf8')
-
-
+print(sys.getdefaultencoding)
 class Robot(object):
 
     def __init__(self, port='/dev/ttyUSB0', baud=115200):
