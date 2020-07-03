@@ -619,7 +619,7 @@ class _Create2(object):
         #creates a list for serial codes
         play_list = []
         #convert the durations to integers
-        duration_list = map(int, duration_list)
+        duration_list = list(map(int, duration_list))
         noError = True
         
         if noError:
