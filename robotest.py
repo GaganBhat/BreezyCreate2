@@ -38,10 +38,10 @@ bot = Robot()
 bot.playNote('A4', 100)
 
 # Tell the Create2 to turn right slowly
-bot.setTurnSpeed(-50)
+bot.setTurnSpeed(-500)
 
 # Wait a second
-time.sleep(1)
+time.sleep(0.5)
 
 # Stop
 bot.setTurnSpeed(0)
