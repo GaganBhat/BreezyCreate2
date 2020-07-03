@@ -25,10 +25,15 @@
 
 import json
 import serial
-import struct
 import warnings
 import time
 import pkg_resources
+
+import struct
+
+reload(struct)  
+struct.setdefaultencoding('utf8')
+
 
 class Robot(object):
 
@@ -1705,7 +1710,6 @@ class _sensorPacketDecoder(object):
         return self.decode_bool(data)  
 
     def safe_unpack(self, fmt, data):
-
         return struct.unpack(fmt, data.encode('utf8'))
 
     def decode_bool(self, byte):
